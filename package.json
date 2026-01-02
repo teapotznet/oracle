@@ -3,7 +3,14 @@
   "version": "0.8.3",
   "description": "CLI wrapper around OpenAI Responses API with GPT-5.2 Pro (via gpt-5.1-pro alias), GPT-5.2, GPT-5.1, and GPT-5.1 Codex high reasoning modes.",
   "type": "module",
-  "main": "dist/bin/oracle-cli.js",
+  "main": "dist/src/oracle.js",
+  "types": "dist/src/oracle.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/src/oracle.js",
+      "types": "./dist/src/oracle.d.ts"
+    }
+  },
   "bin": {
     "oracle": "dist/bin/oracle-cli.js",
     "oracle-mcp": "dist/bin/oracle-mcp.js"
